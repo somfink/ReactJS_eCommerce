@@ -29,6 +29,7 @@ You should download this files and run in terminal:
 
 - ## mobile view:
 
+<img src="https://user-images.githubusercontent.com/101999208/194287202-74373338-cb87-4d4e-99f1-890b7b25b32d.png"   width="300" >
 
 - ## cart modal view:
 
