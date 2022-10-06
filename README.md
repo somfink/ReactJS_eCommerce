@@ -15,6 +15,12 @@ A simple store in which we have the ability to add products to the cart, display
 - React-router
 - React-icons
 
+## Instalation:
+
+You should download this files and run in terminal:
+
+### `npm install`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
