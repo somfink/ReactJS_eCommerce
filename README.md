@@ -21,6 +21,22 @@ You should download this files and run in terminal:
 
 ### `npm install`
 
+## App layout:
+
+- ## desktop view:
+
+![localhost_3000_ (1)](https://user-images.githubusercontent.com/101999208/194284747-84c001d6-4a7c-4bb3-a686-a2e61ca0a341.png)
+
+- ## mobile view:
+
+
+- ## cart modal view:
+
+
+- ## checkout process view:
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
