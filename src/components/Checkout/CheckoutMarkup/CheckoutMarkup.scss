@@ -1,0 +1,49 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/animations';
+
+.checkout {
+  &-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-markup {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30rem;
+  }
+
+  &-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 3rem;
+    height: 6rem;
+
+    & > span:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 5px solid $markups-color;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $secondary-color;
+      cursor: default;
+      backface-visibility: hidden;
+    }
+  }
+
+  &-label.active {
+    & > span:first-child {
+      color: $tertiary-color;
+      border-color: $secondary-color;
+      animation: checkoutLabels 0.6s ease-in;
+    }
+  }
+}

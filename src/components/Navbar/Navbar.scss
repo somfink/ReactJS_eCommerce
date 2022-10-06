@@ -1,0 +1,91 @@
+@import "../../sassStyles/variables";
+@import "../../sassStyles/animations";
+@import "../../sassStyles/mixins";
+
+.navbar {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 4.5rem;
+  background: $secondary-bg-color;
+  box-shadow: 0 2px 15px $shadow-color;
+  z-index: 10;
+  backface-visibility: hidden;
+
+  &.fixed {
+    position: fixed;
+    animation: fixedNavbar 1s;
+    z-index: 10;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    @include for-phone-only {
+      &__name {
+        font-size: 1.3rem;
+      }
+
+      &__icon > :first-child {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__badge {
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      background: $secondary-color;
+      transition: all 0.4s;
+      backface-visibility: hidden;
+      font-weight: bold;
+      color: $primary-color;
+      text-align: center;
+      font-size: 0.8rem;
+      padding-top: 1px;
+    }
+
+    & > :first-child {
+      font-size: 2rem;
+      transition: scale 0.4s;
+      backface-visibility: hidden;
+    }
+
+    & > :first-child:hover {
+      scale: 1.2;
+      cursor: pointer;
+    }
+
+    & > :first-child:hover + &__badge {
+      scale: 1.2;
+      transform: translate(0.1rem, -0.1rem);
+    }
+  }
+}

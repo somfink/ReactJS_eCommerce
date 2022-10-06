@@ -1,0 +1,119 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.product {
+  background: $secondary-bg-color;
+  margin: 0 1rem 1.5rem 1rem;
+  min-width: 18rem;
+  max-width: 26rem;
+  height: 28rem;
+  box-shadow: 0 2px 1px $shadow-color;
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @include for-phone-only {
+    height: 30rem;
+  }
+
+  &-link {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    backface-visibility: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    & > img {
+      width: auto;
+      height: 10rem;
+    }
+
+    &__description {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__description > :last-child {
+      margin-left: 2rem;
+    }
+
+    &__description > span {
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      @include for-phone-only {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &-description {
+    width: 90%;
+    color: $secondary-color;
+
+    @include for-tablet-up {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-addToCart__icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include for-phone-only {
+      padding-top: 1rem;
+      font-size: 1.8rem;
+    }
+
+    @include for-tablet-up {
+      font-size: 2.5rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 2rem;
+    }
+
+    & > :first-child {
+      color: $secondary-color;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+      transition: scale 0.3s;
+      backface-visibility: hidden;
+
+      @include for-phone-only {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      @mixin for-tablet-up {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        scale: 1.2;
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import '../../../sassStyles/variables';
+@import '../../../sassStyles/mixins';
+
+.form {
+  margin: 1rem auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &-name,
+  &-number,
+  &-email,
+  &-address,
+  &-instructions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  &-name > h3,
+  &-number > h3,
+  &-email > h3,
+  &-address > h3,
+  &-instructions > h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &-name {
+    &__input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include for-phone-only {
+        flex-direction: column;
+
+        & > :nth-child(1) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    &__input :first-child {
+        @include for-phone-only {
+          margin-right: 0;
+        }
+
+        @include for-tablet-up {
+          margin-right: 6rem;
+
+        }
+        @include for-desktop-up {
+          margin-right: 10rem;
+        }
+    }
+  }
+
+  &-address {
+
+    &__street {
+        width: 100%;
+        margin-bottom: 1.2rem;
+    }
+
+    &__city {
+        margin-bottom: 1.2rem;
+    }
+
+    &__city, &__country {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        @include for-phone-only {
+          flex-direction: column;
+        }
+    }
+
+    &__city :first-child,
+    &__country :first-child {
+      
+        @include for-phone-only {
+          margin-right: 0;
+
+          & > :nth-child(2) {
+            margin-bottom: 1rem;
+          }
+        }
+
+        @include for-tablet-up {
+          margin-right: 6rem;
+
+        }
+        @include for-desktop-up {
+          margin-right: 10rem;
+        }
+    }
+
+  }
+
+  &-instructions {
+    & > textarea {
+        width: 100%;
+        height: 10rem;
+        font-size: 1.2rem;
+        outline: none;
+        border: 1px solid $secondary-color;
+        padding: .5rem;
+        border-radius: 5px;
+        resize: none;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    & > :first-child {
+      margin-right: 2rem;
+    }
+  }
+}

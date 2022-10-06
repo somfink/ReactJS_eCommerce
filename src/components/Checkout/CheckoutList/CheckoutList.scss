@@ -1,0 +1,49 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.cartCheckout {
+  &-heading {
+    margin: 0 auto;
+    width: 95%;
+    font-size: 1.5rem;
+  }
+
+  &-list {
+    font-size: 1.3rem;
+  }
+
+  &-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+
+    & > :first-child {
+      margin-right: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 0.7rem 1.2rem;
+      border-radius: 10px;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+      backface-visibility: hidden;
+      background: $btn-secondary-color;
+
+      @include for-phone-only {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+    }
+
+    & > :first-child:hover {
+      scale: 1.1;
+      background-color: $btn-primary-color;
+    }
+  }
+
+  & > :nth-child(3) {
+    margin-top: 3rem;
+  }
+}

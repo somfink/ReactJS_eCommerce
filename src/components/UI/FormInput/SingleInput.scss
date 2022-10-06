@@ -1,0 +1,43 @@
+@import "../../../sassStyles/variables";
+
+.input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: clamp(40%, 100%, 100%);
+
+  & > input {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    border: 1px solid $secondary-color;
+
+    &:focus {
+      background: $input-focus;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+
+  & > input.invalid {
+    background: $input-invalid;
+
+    &:focus {
+      background: $input-invalid;
+    }
+  }
+
+  & > label {
+    margin-left: 0.5rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: $secondary-color;
+  }
+}

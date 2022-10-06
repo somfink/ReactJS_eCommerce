@@ -1,0 +1,25 @@
+@use "../../../sassStyles/animations";
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-brand {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & :first-child {
+      font-size: 5.5rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &-brand.active {
+    animation: loadingAnimation 5s ease;
+  }
+}

@@ -1,0 +1,11 @@
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  min-height: 85vh;
+
+  &.mt-s {
+    margin-top: 4rem;
+  }
+}

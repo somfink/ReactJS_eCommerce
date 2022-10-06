@@ -1,0 +1,77 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.cart-list {
+  overflow-y: auto;
+  max-height: 55vh;
+  margin: 1rem 0.5rem;
+  list-style: none;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  @include for-phone-only {
+    margin: 1rem 0;
+    max-height: 30rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+    border-radius: 5px;
+  }
+
+  &__items {
+    border-bottom: 2px solid $secondary-color;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-phone-only {
+      flex-direction: column;
+
+      & > :first-child {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include for-tablet-up {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__description {
+    min-width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 3rem;
+
+    @include for-phone-only {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    & > :first-child {
+      margin-right: 1.5rem;
+    }
+
+    & > :last-child {
+      margin-left: 1rem;
+      cursor: pointer;
+      transition: scale 0.3s ease-out;
+      backface-visibility: hidden;
+      font-size: 1.5rem;
+    }
+
+    & :last-child:hover {
+      scale: 1.1;
+    }
+  }
+}

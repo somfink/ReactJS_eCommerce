@@ -1,0 +1,201 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  width: 70%;
+  margin: 3rem auto;
+  background-color: $secondary-bg-color;
+  border-radius: 1rem;
+
+  @include for-desktop-up {
+    min-height: 100vh;
+  }
+
+  @include for-tablet-up {
+    min-height: 65rem;
+  }
+
+  @include for-phone-only {
+    min-height: 50rem;
+    width: 90%;
+  }
+
+  &.mt-lg {
+    margin-top: 7rem;
+  }
+
+  &-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 45rem;
+    width: 100%;
+    margin-top: 2rem;
+
+    @include for-phone-only {
+      height: 30rem;
+    }
+
+    &__return {
+      position: absolute;
+      left: 3rem;
+      top: 7rem;
+
+      @include for-phone-only {
+        left: 2.5rem;
+        top: 9rem;
+      }
+
+      & > :first-child {
+        font-size: 2.5rem;
+        color: $tertiary-color;
+        transition: all 0.3s;
+      }
+    }
+
+    & > :first-child:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    & > img {
+      width: auto;
+      height: 35rem;
+
+      @include for-phone-only {
+        height: 15rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__description {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 700;
+
+      @include for-phone-only {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        & > span {
+          font-size: 1.4rem;
+          width: 100%;
+        }
+
+        & > :last-child {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &-info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__review {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      @include for-phone-only {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+    }
+
+    &__category {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: 1.3rem;
+      color: $tertiary-color;
+
+      @include for-phone-only {
+        & > span {
+            font-size: 1.2rem;
+        }
+      }
+    }
+
+    &__category :first-child {
+      margin-bottom: 0.5rem;
+      color: $primary-color;
+      font-weight: 500;
+    }
+
+    &__category :last-child:hover {
+      cursor: pointer;
+    }
+
+    &__rating {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+
+      @include for-phone-only {
+        margin-top: 1.5rem;
+        
+        & > span {
+            font-size: 1.2rem;
+        }
+      }
+    }
+
+    &__rating > :last-child {
+      margin-left: 1rem;
+      text-decoration: underline;
+      color: $secondary-color;
+    }
+
+    &__rating > :last-child:hover {
+      cursor: pointer;
+    }
+
+    &__description {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &__description > p {
+      font-size: 1.5rem;
+      color: $secondary-color;
+      letter-spacing: 2px;
+      padding: 1rem 0;
+
+      @include for-phone-only {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      @include for-phone-only {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

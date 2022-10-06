@@ -1,0 +1,64 @@
+@import "../../../sassStyles/variables";
+@import "../../../sassStyles/mixins";
+
+.checkoutSummary {
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 0 auto;
+
+  &-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+
+    @include for-phone-only {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-list {
+    list-style: none;
+    padding: 1.5rem 4rem;
+    border: 0.3rem solid $tertiary-color;
+    border-radius: 5px;
+
+    @include for-phone-only {
+      padding: 1.5rem 0rem;
+      border: none;
+    }
+
+    & > :first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  &-items {
+    margin-bottom: 1.5rem;
+
+    &__heading {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    &__content {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &.mb-lg {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3rem;
+
+    & > :last-child {
+      margin-left: 2rem;
+    }
+  }
+}

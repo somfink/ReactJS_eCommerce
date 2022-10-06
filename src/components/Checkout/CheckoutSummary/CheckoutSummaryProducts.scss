@@ -1,0 +1,36 @@
+.checkoutSummary {
+  &-product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+
+    & > :first-child {
+      margin-right: 1rem;
+      width: 70%;
+    }
+
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 10rem;
+    }
+
+    &__total > p {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      font-weight: 500;
+      border-top: 2px solid black;
+    }
+  }
+}
