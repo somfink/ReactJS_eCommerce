@@ -33,9 +33,11 @@ You should download this files and run in terminal:
 
 - ## cart modal view:
 
+![localhost_3000_ (2)](https://user-images.githubusercontent.com/101999208/194287901-738afbca-0712-4824-a419-8556a6cd63fa.png)
 
 - ## checkout process view:
 
+![localhost_3000_ (3)](https://user-images.githubusercontent.com/101999208/194287918-315708e2-1d71-4bea-96f3-fec8e8a5bbc0.png)
 
 
 # Getting Started with Create React App
